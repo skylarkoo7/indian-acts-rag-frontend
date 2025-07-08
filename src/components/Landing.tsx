@@ -10,22 +10,22 @@ const Landing = () => {
 
   const features = [
     {
-      icon: 'justice' as const,
+      icon: '/law.png',
       title: 'Constitutional Law',
       description: 'Expert guidance on fundamental rights, directive principles, and constitutional amendments'
     },
     {
-      icon: 'gavel' as const,
+      icon: '/law-ico.png',
       title: 'Criminal Law (IPC)',
       description: 'Comprehensive coverage of Indian Penal Code sections and criminal procedures'
     },
     {
-      icon: 'document' as const,
+      icon: '/document.png',
       title: 'Civil & Commercial Law',
       description: 'Contract law, property rights, company law, and commercial regulations'
     },
     {
-      icon: 'scales' as const,
+      icon: '/lady-justice.png',
       title: 'Tax & Financial Law',
       description: 'Income tax, GST, customs, and financial regulatory compliance'
     }
@@ -109,7 +109,7 @@ const Landing = () => {
             >
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
-                  
+                  <img src={feature.icon} alt={feature.title + ' icon'} className="w-16 h-16 object-contain" />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-base text-muted-foreground">{feature.description}</p>

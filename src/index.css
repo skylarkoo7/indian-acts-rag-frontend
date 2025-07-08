@@ -137,7 +137,29 @@ All colors MUST be HSL.
   @apply bg-muted-foreground;
 }
 
+/* Global selection */
 ::selection {
-  background-color: #ffcc3f; /* blue-500 */
+  background-color: #ffcc3f;
   color: black;
+}
+
+/* For inline style (all spacing/casing) */
+span[style*="color:#ffcc3f"]::selection,
+span[style*="color: #ffcc3f"]::selection,
+span[style*="color:#FFCC3F"]::selection,
+span[style*="color: #FFCC3F"]::selection {
+  background: black !important;
+  color: #ffcc3f !important;
+}
+
+/* For Tailwind arbitrary color class */
+.text-\[\#ffcc3f\]::selection {
+  background: black !important;
+  color: #ffcc3f !important;
+}
+
+/* For Tailwind yellow-500 (if you use it) */
+.text-yellow-500::selection {
+  background: black !important;
+  color: #ffcc3f !important;
 }
